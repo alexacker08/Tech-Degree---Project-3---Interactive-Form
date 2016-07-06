@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+function applyClasses(){
+	$('#size, #design, #colors, #year, #month').addClass('adjust-width');
+	$('#title-area').addClass('bottom-50');
+	$('#year').addClass('adjust-margins');
+}
+
+
 function tamingselect(){
 	
 	if(!document.getElementById && !document.createTextNode){return;}
@@ -115,5 +122,6 @@ function tamingselect(){
 }
 
 tamingselect();
+applyClasses();
 
 });

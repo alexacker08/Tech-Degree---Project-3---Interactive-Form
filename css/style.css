@@ -77,6 +77,13 @@ label {
 	margin-bottom: .5em;
 }
 
+.activities label {
+	transition: color .2s linear, opacity .2s linear;
+	-webkit-transition: all .2s linear, opacity .2s linear;
+	-moz-transition: all .2s linear, opacity .2s linear;
+
+}
+
 input,
 select {
 	margin-bottom: 1.125em;	
@@ -115,7 +122,7 @@ button:hover {
 }
 
 /* ================================= 
-  jQuery Actions=
+  jQuery Actions
 ==================================== */
 
 
@@ -131,11 +138,16 @@ button:hover {
 
 }
 
+
 .required {
 	font-style: italic;
 
 }
 
+.required.size-adjusted {
+	font-size: 12px;
+
+}
 
 /* ================================= 
   Page Styles
@@ -144,6 +156,11 @@ button:hover {
 .container {
 	margin: auto;
 	max-width: 680px;
+}
+
+.activities {
+	min-height: 379px;
+
 }
 
 .shirt div {
@@ -208,9 +225,9 @@ button:hover {
   Dropdown Adjustments
 ==================================== */
 
-#size {
+#size.adjust-width {
 	width: 20%;
-	float: left;
+	float: left; 
 
 }
 
@@ -219,17 +236,17 @@ button:hover {
 
 }
 
-#design {
+#design.adjust-width {
 	width: 30%;
 
 }
 
-#colors {
+#colors.adjust-width {
 	width: 40%;
 
 }
 
-#title-area {
+#title-area.bottom-50 {
 	width: 50%;
 	margin-bottom: 25px;
 
@@ -240,18 +257,14 @@ button:hover {
 
 }
 
-#month {
-	margin-right: 1%;
-
-}
-
-#year {
+#year.adjust-margins {
 	margin-top: 27px;
+	margin-left: 2.5%;
 
 }
 
-#month, #year {
-	width: 300px;
+#month.adjust-width, #year.adjust-width {
+	width: 48.75%;
 	float: left;
 
 }
@@ -260,6 +273,13 @@ a.trigger {
 	width: auto;
 	padding: 7px;
 	border-radius: 2px;
+	background-color: #c1deeb;
+	color: #000;
+
+}
+
+a.trigger:hover{
+	color: #000;
 
 }
 
@@ -290,6 +310,7 @@ div .dropcontainer {
 	width: auto;
 	padding: 7px;
 	border-radius: 2px;
+	color: #000;
 
 }
 
@@ -297,3 +318,68 @@ div .dropcontainer {
 	width: 100%;
 
 }
+
+@media screen and (max-width: 679px){
+
+	#title-area.bottom-50 {
+		width: 100%;
+
+	}
+
+	#payment-area,#colors {
+		width: 100%;
+
+	}
+
+	#size.adjust-width {
+		width: 47.5%;
+		margin-right: 0px;
+
+	}
+
+	#design.adjust-width {
+		width: 47.5%;
+		margin-left: 5%;
+		margin-right: 0px;
+
+	}
+
+	#colors {
+		margin-top: 20px;
+
+	}
+
+	.activities {
+		min-height: 250px;
+
+	}
+
+	.activities label {
+		font-size: 11px;
+
+	}
+
+}
+
+@media screen and (max-width: 400px){
+
+form {
+	padding-left: 1em;
+	padding-right: 1em;
+
+}
+
+a.trigger {
+	background-size: 20px;
+	font-size: 11px;
+
+}
+
+.activities label {
+	font-size: 8px;
+
+}
+
+
+}
+
